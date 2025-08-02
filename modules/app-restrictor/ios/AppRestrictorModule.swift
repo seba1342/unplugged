@@ -13,7 +13,7 @@ public class AppRestrictorModule: Module {
         Name("AppRestrictor")
 
         AsyncFunction("requestAuthorization") { (promise: Promise) in
-            var authManager = AuthorizationManager()
+            let authManager = AuthorizationManager()
 
             switch authManager.authorizationStatus {
             case .notDetermined:
@@ -42,7 +42,7 @@ public class AppRestrictorModule: Module {
         }
 
         AsyncFunction("authorizationStatus") { (promise: Promise) in
-            var authManager = AuthorizationManager()
+            let authManager = AuthorizationManager()
 
             switch authManager.authorizationStatus {
             case .notDetermined:
@@ -67,8 +67,17 @@ public class AppRestrictorModule: Module {
                 view.isPickerPresented = isPresented
             }
 
-            // This defines the event that will be sent from the native view to JS
+            // Events that will be sent from the native view to JS
             Events("onSelection")
+            Events("onDismiss")
+        }
+
+        // Definition for the new ActivityLabelView
+        View(ActivityLabelView.self) {
+            Prop("tokenJSON") {
+                (view: ActivityLabelView, jsonString: String?) in
+                view.tokenJSON = jsonString
+            }
         }
     }
 }

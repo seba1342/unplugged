@@ -8,4 +8,4 @@ type AppRestrictorModuleEvents = {
 
 class AppRestrictorModule extends NativeModule<AppRestrictorModuleEvents> {}
 
-export default registerWebModule(AppRestrictorModule, "AppRestrictorModule");
+export default registerWebModule(AppRestrictorModule, "AppRestrictor");

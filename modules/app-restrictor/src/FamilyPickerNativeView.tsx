@@ -8,6 +8,11 @@ export type FamilyPickerNativeViewProps = ViewProps & {
    */
   isPickerPresented: boolean;
   /**
+   * A callback that is triggered when the user doesn't make a selection, but
+   * closes the FamilyPicker
+   */
+  onDismiss: () => void;
+  /**
    * A callback event that the native view will call when the user makes a selection.
    * The event contains the selection data as a JSON string.
    */
@@ -17,7 +22,7 @@ export type FamilyPickerNativeViewProps = ViewProps & {
 // This line gets a reference to the native view manager that Expo creates
 // for your module. The name is automatically generated as "YourModuleNameView".
 const NativeView: React.ComponentType<FamilyPickerNativeViewProps> =
-  requireNativeViewManager("AppRestrictor_FamilyActivityPickerView");
+  requireNativeViewManager("AppRestrictor");
 
 /**
  * A React component that wraps the native FamilyActivityPicker view. Used for

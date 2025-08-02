@@ -17,14 +17,16 @@
       "bundleIdentifier": "au.com.unplugged",
       "entitlements": {
         "com.apple.developer.family-controls": true
-      }
+      },
+      "appleTeamId": "BN448AYMMA"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "au.com.unplugged"
     },
     "web": {
       "favicon": "./assets/favicon.png"
