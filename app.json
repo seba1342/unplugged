@@ -13,8 +13,11 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "au.com.unplugged"
+      "supportsTablet": false,
+      "bundleIdentifier": "au.com.unplugged",
+      "entitlements": {
+        "com.apple.developer.family-controls": true
+      }
     },
     "android": {
       "adaptiveIcon": {
