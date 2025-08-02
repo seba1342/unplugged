@@ -13,7 +13,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "au.com.unplugged"
     },
     "android": {
       "adaptiveIcon": {
@@ -24,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "931fd752-d467-419b-bd84-8c820d2d0eab"
+      }
+    },
+    "owner": "seba1342"
   }
 }
